@@ -1,0 +1,16 @@
+{
+	"apiVersion": 2,
+	"name": "create-block-esbuild",
+	"version": "0.1.0",
+	"title": "Create Block esbuild",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "create-block-esbuild",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

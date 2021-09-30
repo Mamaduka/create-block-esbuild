@@ -1,0 +1,16 @@
+{
+	"name": "create-block-esbuild",
+	"version": "0.1.0",
+	"description": "Example block written with ESNext standard and JSX support – build step required.",
+	"author": "The WordPress Contributors",
+	"license": "GPL-2.0-or-later",
+	"main": "build/index.js",
+	"scripts": {
+		"build": "node ./esbuild.config.js --minify",
+		"dev": "node ./esbuild.config.js",
+		"watch": "node ./esbuild.config.js --watch"
+	},
+	"devDependencies": {
+		"esbuild": "^0.13.3"
+	}
+}
