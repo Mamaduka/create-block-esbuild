@@ -12,7 +12,7 @@ import Edit from './edit';
 import save from './save';
 
 
-registerBlockType( 'create-block-esbuild', {
+registerBlockType( 'mamaduka/create-block-esbuild', {
 	edit: Edit,
 	save,
 } );

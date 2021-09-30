@@ -1,6 +1,6 @@
 {
 	"apiVersion": 2,
-	"name": "create-block-esbuild",
+	"name": "mamaduka/create-block-esbuild",
 	"version": "0.1.0",
 	"title": "Create Block esbuild",
 	"category": "widgets",
@@ -12,5 +12,5 @@
 	"textdomain": "create-block-esbuild",
 	"editorScript": "file:./build/index.js",
 	"editorStyle": "file:./build/index.css",
-	"style": "file:./build/style-index.css"
+	"style": "file:./build/style.css"
 }
