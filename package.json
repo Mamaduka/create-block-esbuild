@@ -11,6 +11,7 @@
 		"watch": "node ./esbuild.config.js --watch"
 	},
 	"devDependencies": {
-		"esbuild": "^0.13.3"
+		"esbuild": "^0.13.3",
+		"json2php": "^0.0.4"
 	}
 }
