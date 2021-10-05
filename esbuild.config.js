@@ -6,6 +6,7 @@ const json2php = require( 'json2php' );
 const args = process.argv.slice( 2 );
 
 const WORDPRESS_NAMESPACE = '@wordpress/';
+const BUNDLED_PACKAGES = [ '@wordpress/icons', '@wordpress/interface' ];
 
 /**
  * Given a string, returns a new string with dash separators converted to
@@ -35,6 +36,11 @@ const DependencyExtractionPlugin = {
 		}));
 
 		build.onLoad({ filter: /.*/, namespace: 'wp-globals' }, ( { path } ) => {
+
+			if ( BUNDLED_PACKAGES.includes( path ) ) {
+				return undefined;
+			}
+
 			const package = path.substring(WORDPRESS_NAMESPACE.length)
 			const name = camelCaseDash( package );
 
