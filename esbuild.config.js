@@ -30,16 +30,12 @@ const DependencyExtractionPlugin = {
 		const options = build.initialOptions
 		const deps = [ 'wp-element' ];
 
-		build.onResolve( { filter: /^@wordpress\// }, ( args ) => ({
+		build.onResolve( { filter: /^@wordpress\// }, ( args ) => BUNDLED_PACKAGES.includes( args.path ) ? undefined : {
 			path: args.path,
 			namespace: 'wp-globals',
-		}));
+		});
 
 		build.onLoad({ filter: /.*/, namespace: 'wp-globals' }, ( { path } ) => {
-
-			if ( BUNDLED_PACKAGES.includes( path ) ) {
-				return undefined;
-			}
 
 			const package = path.substring(WORDPRESS_NAMESPACE.length)
 			const name = camelCaseDash( package );
